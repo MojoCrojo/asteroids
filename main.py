@@ -30,6 +30,10 @@ def main():
                 return
         screen.fill("black") # color screen
         group_updates.update(dt)
+        for asteroid in asteroids:
+            if asteroid.collision(player):
+                print("Game over!")
+                pygame.quit()
         for item in group_draws:
             item.draw(screen)
         pygame.display.flip()

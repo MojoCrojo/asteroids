@@ -6,7 +6,7 @@ class Player(CircleShape):
     def __init__(self, x, y):
         super().__init__(x, y, PLAYER_RADIUS)
         self.radius = PLAYER_RADIUS
-        self.position = (x, y)
+        self.position = pygame.math.Vector2(x, y)
         self.rotation = 0
     
     def draw(self, screen):
